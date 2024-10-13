@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8>
+            <meta name=format-detection content="telephone=no">
+                <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+                <title>磁盘缓存</title>
+                <link href=../css/module.css rel=stylesheet>
+                    <script src="../js/PASC.app.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                        function showText(text) {
+                            var options = {
+                                type:'text',
+                                text:text,
+                            }
+                            if (PASC.app.toast) {
+                                PASC.app.toast(options, function(res) {
+
+                                }, function(err) {
+
+                                })
+                            }
+                        }
+                        
+                        function set() {
+                            var options = {
+                                method:'set',
+                                userID:'USERID1',
+                                key:'key1',
+                                value:'value1',
+                            }
+                            if (PASC.app.diskCache) {
+                                PASC.app.diskCache(options, function(res) {
+                                    showText('success')
+                                }, function(err) {
+
+                                })
+                            }
+                        }
+                    
+                    function get() {
+                        var options = {
+                            method:'get',
+                            userID:'USERID1',
+                            key:'key1',
+                        }
+                        if (PASC.app.diskCache) {
+                            PASC.app.diskCache(options, function(res) {
+                                showText('success')
+                            }, function(err) {
+
+                            })
+                        }
+                    }
+                    
+                    function remove() {
+                        var options = {
+                            method:'remove',
+                            userID:'USERID1',
+                            key:'key1',
+                        }
+                        if (PASC.app.diskCache) {
+                            PASC.app.diskCache(options, function(res) {
+                                showText('success')
+                            }, function(err) {
+
+                            })
+                        }
+                    }
+                    
+                    function clear2() {
+                        var options = {
+                            method:'clear',
+                            userID:'USERID1',
+                        }
+                        if (PASC.app.diskCache) {
+                            PASC.app.diskCache(options, function(res) {
+                                showText('success')
+                            }, function(err) {
+
+                            })
+                        }
+                    }
+                    
+                        </script>
+                    </head>
+    <body>
+        <div class="cell" onclick="set()">set</div>
+        <div class="cell" onclick="get()">get</div>
+        <div class="cell" onclick="remove()">remove</div>
+        <div class="cell" onclick="clear2()">clear</div>
+    </body>
+</html>
+

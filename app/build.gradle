@@ -1,0 +1,133 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    signingConfigs {
+
+//    debug {
+//      storeFile file('hybridKeystore.jks')
+//      storePassword "hybrid123456"
+//      keyAlias "hybridKey"
+//      keyPassword "hybrid123456"
+//      v2SigningEnabled true
+//    }
+        debug {
+            storeFile file('keystore.jks')
+            storePassword "pa123456"
+            keyAlias "smt"
+            keyPassword "pa123456"
+            v2SigningEnabled true
+        }
+    }
+
+    compileSdkVersion rootProject.ext.compile_sdk_version
+    buildToolsVersion rootProject.ext.build_tool_version
+
+    defaultConfig {
+//    applicationId "com.pasc.libbrowser"
+        applicationId "com.pingan.smt.test1"
+        minSdkVersion rootProject.ext.min_sdk_version
+        targetSdkVersion rootProject.ext.target_sdk_version
+        versionCode rootProject.ext.version_code
+        versionName rootProject.ext.version_name
+
+        ndk {
+            //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+            abiFilters "armeabi"
+        }
+
+//        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.pasc.lib') {
+            if (requested.name == 'hybrid') {
+                details.useVersion "${rootProject.ext.hybridVersion}"
+            }
+        }
+
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+//    if(isMavenBuild == 'false'){
+        api project(':LibHybrid')
+        api project(':Libopenplatform')
+        api project(':BusinessHybrid')
+        api project(':LibOffline')
+        api 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:5.1.4'
+//    } else {
+//
+//        if(isMavenModule == 'true') {
+//            api "com.pasc.lib:hybrid:${rootProject.ext.hybridVersion}"
+//            api "com.pasc.lib:openplatform:${rootProject.ext.openPlatformVersion}"
+//            api "com.pasc.lib.hybrid:behavior:${rootProject.ext.hybridBehaviorVersion}"
+//            api project(':LibOffline')
+//
+//        }else{
+//            api "com.pasc.lib:hybrid:${rootProject.ext.hybridVersion}"
+//            api "com.pasc.lib:openplatform:${rootProject.ext.openPlatformVersion}"
+//            api "com.pasc.lib.hybrid:behavior:${rootProject.ext.hybridBehaviorVersion}"
+//            api project(':LibOffline')
+//
+//        }
+//    }
+    api "com.android.support:appcompat-v7:${support_lib_version}"
+    api "com.android.support:design:${support_lib_version}"
+    api "com.android.support:support-v4:${support_lib_version}"
+
+    api 'io.reactivex.rxjava2:rxjava:2.1.12'
+    api 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    api 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.3@aar'
+    api 'org.greenrobot:eventbus:3.1.1'
+    //简单圆角控件
+    api 'com.flyco.roundview:FlycoRoundView_Lib:1.1.4@aar'
+    //api project(':photoview')
+    //picasso
+    api 'com.squareup.picasso:picasso:2.5.2'
+    api 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+    // Stetho
+    debugApi "com.facebook.stetho:stetho:${stetho_version}"
+    api "com.facebook.stetho:stetho-okhttp3:${stetho_version}"
+    debugApi "com.facebook.stetho:stetho-js-rhino:${stetho_version}"
+    //高德地图
+//    api 'com.amap.api:location:3.6.1'
+
+    api 'com.android.support:multidex:1.0.3'
+    // banner库
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.37'
+
+    api "com.squareup.retrofit2:retrofit:${retrofit2_version}"
+    api "com.squareup.retrofit2:converter-gson:${retrofit2_version}"
+    api "com.squareup.retrofit2:adapter-rxjava2:${retrofit2_version}"
+    api "com.squareup.okhttp3:okhttp:${okhttp3_version}"
+    api "com.squareup.okhttp3:logging-interceptor:${okhttp3_version}"
+    api 'com.zhihu.android:matisse:0.5.2-beta2'
+    api LIB_NET
+
+    api 'commons-io:commons-io:2.6'
+    implementation "com.tencent.tbs:tbssdk:44085"
+
+}

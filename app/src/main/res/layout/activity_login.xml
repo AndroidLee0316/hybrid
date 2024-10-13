@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/text_size_17"
+        android:layout_margin="@dimen/dp_10"
+        android:text="开放平台登陆测试"/>
+    <EditText
+        android:id="@+id/et_account"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="@dimen/dp_50"
+        android:layout_gravity="center_horizontal"
+        android:hint="请输入帐号"/>
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="@dimen/dp_50"
+        android:layout_gravity="center_horizontal"
+        android:hint="请输入验证码"/>
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="@dimen/dp_35"
+        android:layout_gravity="center_horizontal"
+        android:text="登陆"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:text="开放平台登陆为给第三方演示用，本包是常熟市民通测试帐号18772117862，验证码为666666，app登陆根据帐号密码生成token"/>
+</LinearLayout>

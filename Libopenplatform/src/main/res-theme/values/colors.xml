@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!-- 用户授权协议的颜色 -->
+  <color name="paschybrid_auth_protocol">#53a6f6</color>
+</resources>

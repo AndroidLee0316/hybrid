@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <Button
+      android:id="@+id/sparseArrayView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="测试SparseArray"
+      />
+
+  <Button
+      android:id="@+id/coverView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="测试遮盖问题"
+      />
+
+  <Button
+    android:id="@+id/button_1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="开放平台效果测试页"
+    />
+  <Button
+    android:id="@+id/szOpenPlatformView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="i深圳开放平台"
+    />
+
+  <Button
+      android:id="@+id/errorPageView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="错误页测试"
+      />
+    <EditText
+        android:id="@+id/et_url"
+        android:text="http://smt-open.yun.city.pingan.com/demo/base/?area=jixian-stg3#/interface/webview/close-with-back-home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/button_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到你自己的页面进行测试"
+        android:background="@color/red_d83e51"/>
+  <Button
+      android:id="@+id/button_file_select"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="文件选择测试"/>
+</LinearLayout>

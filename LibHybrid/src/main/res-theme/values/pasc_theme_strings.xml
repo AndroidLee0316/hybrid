@@ -1,0 +1,21 @@
+<resources>
+    <string name="hybrid_version_name">1.1.0</string>
+
+    <string name="hybrid_file_open_error">文件无法打开</string>
+
+    <string name="hybrid_open_call_phone_number">拨打电话</string>
+
+    <string name="hybrid_prompt">提示</string>
+    <string name="hybrid_unsafe_link">您的连接不是私密连接,攻击者可能会试图从%s窃取您的信息（例如：密码、通讯内容或信用卡信息)</string>
+    <string name="hybrid_ignore">忽略</string>
+    <string name="hybrid_cancel">取消</string>
+    <string name="hybrid_copy_success">链接复制成功</string>
+
+
+    <string name="hybrid_strings_net_error_btn">立即重试</string>
+    <string name="hybrid_strings_net_error_tip">暂无网络，稍后再试啦</string>
+    <string name="hybrid_close_page">关闭</string>
+
+    <string name="hybrid_nonet_title">暂无网络</string>
+
+</resources>

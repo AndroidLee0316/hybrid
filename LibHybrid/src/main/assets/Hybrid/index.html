@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <meta name=format-detection content="telephone=no">
+    <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+    <title>web测试</title>
+    <link href=css/module.css rel=stylesheet>
+    <script src="js/PASC.app.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        //【开发用】
+        function openWeb(path) {
+            window.location.href = path;
+        }
+
+        function appNewWebView(urlString) {
+            var options = {
+                url: urlString
+            }
+            if(PASC.app.openNewWebView) {
+                PASC.app.openNewWebView(options, function(res) {
+                    console.log(JSON.stringify(res))
+                }, function(err) {
+                    alert("callback error="+JSON.stringify(err));
+                })
+            }
+        }
+
+        function openZip() {
+            window.location.href = "../webTest.zip";
+        }
+
+        //4
+        function appClose() {
+            var options = {}
+            if(PASC.app.close) {
+                PASC.app.close(options, function(res) {
+                    console.log(JSON.stringify(res))
+                }, function(err) {
+                    alert("callback error="+JSON.stringify(err));
+                })
+            }
+        }
+
+
+        function toolBar (options) {
+            if (PASC.app.setToolBar) {
+                PASC.app.setToolBar(options, function (res) {
+
+                }, function (err) {
+                    alert("callback error=" + JSON.stringify(err));
+                })
+            }
+        }
+
+        //8
+        function backToHomeVC(index) {
+            var options = {
+                index: index
+            }
+            if (PASC.app.closeWithBackHome) {
+                PASC.app.closeWithBackHome(options, function (res) {
+
+                }, function (err) {
+                    alert("callback error=" + JSON.stringify(err));
+                })
+            }
+        }
+
+
+        //10
+        function map() {
+            var options = {
+                startAddress: '龙华文化广场',
+                startLongitude: 114.0366703,
+                startLatitude: 22.655068,
+                endAddress: '深圳大学',
+                endLongitude: 113.9348333,
+                endLatitude: 22.533021,
+            }
+            if (PASC.app.mapNavigation) {
+                PASC.app.mapNavigation(options, function (res) {
+
+                }, function (err) {
+                    alert("callback error=" + JSON.stringify(err));
+                })
+            }
+        }
+
+        //11
+        function statisticsPage() {
+            var options = {
+                type: 0,
+                pageName: 'vc1',
+            }
+            if (PASC.app.webStatsPage) {
+                PASC.app.webStatsPage(options, function (res) {
+                    alert(JSON.stringify(res));
+                }, function (err) {
+                    alert("callback error=" + JSON.stringify(err));
+                })
+            }
+        }
+
+        //12
+        function statisticsEvent() {
+            var options = {
+                eventId: 'eventID',
+                label: 'label',
+                map: {'name':'zitong', 'age':'26'}
+            }
+            if (PASC.app.webStatsEvent) {
+                PASC.app.webStatsEvent(options, function (res) {
+                    alert(JSON.stringify(res));
+                }, function (err) {
+                    alert("callback error=" + JSON.stringify(err));
+                })
+            }
+        }
+
+        function browseFile() {
+            var options = {
+                fileUrl: 'http://sxsl.sz.gov.cn/qzapi/qzqd/attach/upload/398246251306418176',
+                inAppBrowse: true
+            }
+            if (PASC.app.browseFile) {
+                PASC.app.browseFile(options, function (res) {
+
+                }, function (err) {
+                    alert("callback error=" + JSON.stringify(err));
+                })
+            }
+        }
+
+        function callPhone() {
+            var options = {
+                phoneNum: '13200001111'
+            }
+            if (PASC.app.callPhone) {
+                PASC.app.callPhone(options, function (res) {
+
+                }, function (err) {
+                    alert("callback error=" + JSON.stringify(err));
+                })
+            }
+        }
+
+        //13
+        function share() {
+            var options = {
+                image: 'https://res.wx.qq.com/a/wx_fed/weixin_portal/res/static/img/dNEBuK6.png',
+                title: 'title',
+                content: 'message',
+                shareUrl: 'https://www.baidu.com',
+                shareTypes: [{platformID: 0}, {platformID: 1, shareUrl: 'https://www.apple.com'}, {platformID: 2}, {platformID: 3}, {platformID: 4}, {platformID: 5}, {platformID: 6}, {platformID: 7}]
+            }
+            if (PASC.app.share) {
+                PASC.app.share(options, function (res) {
+
+                    alert(JSON.stringify(res));
+                }, function (err) {
+                    alert("callback error=" + JSON.stringify(err));
+                })
+            }
+        }
+
+        //15
+        function getDeviceInfo() {
+            var options = {}
+            if (PASC.app.getDeviceInfo) {
+                PASC.app.getDeviceInfo(options, function (res) {
+
+                    window.location.href = "html/hud.html";
+                }, function (err) {
+                    alert("callback error=" + JSON.stringify(err));
+                })
+            }
+        }
+
+        //16
+        function showHud() {
+            window.location.href = "html/hud.html";
+        }
+
+        //20
+        function selectContact() {
+            var options = {}
+            if (PASC.app.selectContact) {
+                PASC.app.selectContact(options, function (res) {
+                    alert(JSON.stringify(res));
+                }, function (err) {
+                    alert("callback error=" + JSON.stringify(err));
+                })
+            }
+        }
+
+        //21
+        function gps() {
+            var options = {}
+            if (PASC.app.getGpsInfo) {
+                PASC.app.getGpsInfo(options, function (res) {
+                    alert(JSON.stringify(res));
+                }, function (err) {
+                    alert("callback error=" + JSON.stringify(err));
+                })
+            }
+        }
+
+        //22
+        function qr() {
+            var options = {}
+            if (PASC.app.openQRCode) {
+                PASC.app.openQRCode(options, function (res) {
+                    alert(JSON.stringify(res));
+                }, function (err) {
+                    alert("callback error=" + JSON.stringify(err));
+                })
+            }
+        }
+
+        function curFinderPath() {
+            var path = window.location.href.replace('/index.html', '');
+            return path;
+        }
+
+        function appNativeRoute(str,type) {
+            var options = {
+                path:str,
+                params:'',
+                openType:type
+            }
+            if(PASC.app.nativeRoute) {
+                PASC.app.nativeRoute(options, function(res) {
+                    alert(JSON.stringify(res))     
+                }, function(err) {
+                    alert("callback error="+JSON.stringify(err));
+                })
+            }
+        }
+
+
+
+        function appGetUserInfo() {
+            var options = {}
+            if(PASC.app.getUserInfo) {
+                PASC.app.getUserInfo(options, function(res) {
+                    alert(JSON.stringify(res))     
+                }, function(err) { 
+                    alert("callback error="+JSON.stringify(err));
+                })
+            }
+        }
+
+    </script>
+</head>
+<body>
+<div class="section">开发用</div>
+<div class="cell" onclick="openWeb('https://www.baidu.com')">打开百度</div>
+<div class="cell" onclick="appNewWebView(window.location.href)">新的界面打开当前网页[新]</div>
+<div class="cell" onclick="openZip()">打开压缩文件</div>
+<div class="cell" onclick="openWeb('tel://13800138000')">打电话</div>
+
+<div class="section">通用-基础</div>
+<div class="cell" onclick="alert(navigator.userAgent)">1.获取UserAgent</div>
+<div class="cell" onclick="openWeb('html/log.html')">2.日志打印[新]</div>
+<div class="cell" onclick="getDeviceInfo()">3.设备信息[新]</div>
+
+<div class="section">通用-跳转</div>
+<div class="cell" onclick="appNewWebView('https://www.apple.com')">1.跳转到新的界面并加载URL[新]</div>
+<div class="cell" onclick="appClose()">2.退出当前WebView</div>
+<div class="cell" onclick="openWeb('html/goback.html')">3.返回上一个网页测试</div>
+<div class="cell" onclick="backToHomeVC(0)">4.回到主页[新]</div>
+<div class="cell" onclick="backToHomeVC(-1)">5.回到当前根目录[新]</div>
+<div class="cell" onclick="openWeb('https://itunes.apple.com/cn/app/%E6%88%91%E7%9A%84%E6%B7%B1%E5%9C%B3/id1363830499?mt=8')">6.跳转到iTunes</div>
+
+<div class="section">通用-UI</div>
+<div class="cell" onclick="appNewWebView(curFinderPath() + '/html/toolbar.html')">1.导航栏定制[新]</div>
+<div class="cell" onclick="toolBar({isHide: true})">隐藏导航栏[新]</div>
+<div class="cell" onclick="toolBar({isHide: false})">显示导航栏[新]</div>
+
+<div class="section">通用-控件</div>
+<div class="cell" onclick="selectContact()">1.选择联系人</div>
+
+<div class="section">通用-三方</div>
+<div class="cell" onclick="gps()">1.当前位置GPS信息</div>
+<div class="cell" onclick="map()">2.App地图</div>
+<div class="cell" onclick="statisticsPage()">3.页面统计</div>
+<div class="cell" onclick="statisticsEvent()">4.事件统计</div>
+<div class="cell" onclick="share()">5.分享</div>
+<div class="cell" onclick="showHud()">6.Toast[新]</div>
+<div class="cell" onclick="qr()">7.扫描二维码[新]</div>
+<div class="cell" onclick="openWeb('html/memoryCache.html')">8.内存缓存[新]</div>
+<div class="cell" onclick="openWeb('html/diskCache.html')">9.磁盘缓存[新]</div>
+<div class="cell" onclick="browseFile()">10.浏览文件</div>
+<div class="cell" onclick="callPhone()">11.拨打电话[新]</div>
+
+<div class="section">业务</div>
+<div class="cell" onclick="appNativeRoute('/user/login/main', 1)">登录</div>
+<div class="cell" onclick="appNativeRoute('/user/auth/verify', 0)">实名认证</div>
+<div class="cell" onclick="appNativeRoute('/user/auth/face', 0)">人脸识别</div>
+<div class="cell" onclick="appNativeRoute('/life/service/swc_search', 0)">社康中心搜索页面</div>
+<div class="cell" onclick="appGetUserInfo()">获取用户信息</div>
+</body>
+</html>
+

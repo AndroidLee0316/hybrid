@@ -1,0 +1,7 @@
+;(function () {
+    window.history.back = function(){
+        if(history.length = 0){
+             PASCJSBridge.goback();
+        }
+    }
+})();

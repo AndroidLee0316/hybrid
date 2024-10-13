@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="WebCommonTitleView">
+        <attr name="hybrid_toolbar_title" format="string" />
+        <attr name="hybrid_toolbar_titleColor" format="color" />
+        <attr name="hybrid_toolbar_backgroundColor" format="color" />
+        <attr name="hybrid_toolbar_titleSize" format="dimension" />
+        <attr name="hybrid_toolbar_titleVisibility" format="boolean" />
+
+        <attr name="hybrid_toolbar_leftText" format="string" />
+        <attr name="hybrid_toolbar_leftTextColor" format="color" />
+        <attr name="hybrid_toolbar_leftTextSize" format="dimension" />
+        <attr name="hybrid_toolbar_leftTextVisibility" format="boolean" />
+
+        <attr name="hybrid_toolbar_rightText" format="string" />
+        <attr name="hybrid_toolbar_rightTextColor" format="color" />
+        <attr name="hybrid_toolbar_rightTextSize" format="dimension" />
+        <attr name="hybrid_toolbar_rightTextVisibility" format="boolean" />
+
+        <attr name="hybrid_toolbar_leftIcon" format="reference" />
+        <attr name="hybrid_toolbar_leftIconVisibility" format="boolean" />
+
+        <attr name="hybrid_toolbar_rightIcon" format="reference" />
+        <attr name="hybrid_toolbar_rightIconVisibility" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="MaxHeightScrollView">
+        <attr name="hybrid_msv_maxHeight" format="dimension" />
+    </declare-styleable>
+
+</resources>

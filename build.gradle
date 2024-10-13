@@ -1,0 +1,78 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: 'module_config.gradle'
+
+buildscript {
+
+    ext {
+        kotlin_version = '1.2.41'
+        anko_version = '0.10.4'
+        dbflow_version = '4.2.4'
+        walle_version = '1.1.6'
+        build_tool_version = '30.0.3'
+        min_sdk_version = 21
+        target_sdk_version = 30
+        compile_sdk_version = 30
+        okhttp3_version = '3.10.0'
+        rxlifecycle2_version = '2.2.1'
+        support_lib_version = '27.1.1'
+        leakcanary_version = '1.5.4'
+        retrofit2_version = '2.4.0'
+        stetho_version = '1.5.0'
+        version_name = "1.6.0"
+        version_code = 160
+    }
+
+
+    repositories {
+        google()
+        maven{ url 'http://maven.aliyun.com/nexus/content/repositories/central/'}
+        jcenter(){url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        maven { url 'E://zxsCode/maven' }
+        mavenCentral()
+        mavenLocal()
+        flatDir {
+            dirs 'libs'   // aar目录
+        }
+        maven { url "https://jitpack.io" }
+        maven { url 'https://maven.google.com' }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.3'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+
+    }
+}
+
+allprojects {
+    repositories {
+        maven{ url 'http://maven.aliyun.com/nexus/content/repositories/central/'}
+        jcenter(){url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        maven { url 'E://zxsCode/maven' }
+        mavenLocal()
+        flatDir {
+            dirs 'libs'   // aar目录
+        }
+        maven { url "https://jitpack.io" }
+
+        google()
+        mavenCentral()
+        maven { url 'https://maven.google.com' }
+    }
+
+    configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            def requested = details.requested
+            //解决Could not get resource 'https://jitpack.io/com/github/CymChad/BaseRecyclerViewAdapterHelper/2.9.37/BaseRecyclerViewAdapterHelper-2.9.37.aar'的问题
+            if(requested.group == 'com.github.CymChad'&&requested.name=='BaseRecyclerViewAdapterHelper'){
+                details.useVersion "2.9.47"
+            }
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

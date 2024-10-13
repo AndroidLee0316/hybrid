@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+  <com.pasc.lib.widget.toolbar.PascToolbar
+      android:id="@+id/view_title"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:backgroundColor="@color/white_ffffff"
+      app:titleColor="@color/black_333333"
+      app:titleDividerVisibility="true"/>
+
+  <!--<com.pasc.lib.widget.EmptyView-->
+      <!--android:id="@+id/emptyView"-->
+      <!--android:layout_width="match_parent"-->
+      <!--android:layout_height="match_parent"/>-->
+
+  <com.pasc.lib.hybrid.eh.utils.HybridFileDisplayView
+      android:id="@+id/fileDisplayView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"/>
+
+</LinearLayout>

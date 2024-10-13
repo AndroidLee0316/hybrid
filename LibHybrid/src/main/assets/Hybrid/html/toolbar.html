@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <meta name=format-detection content="telephone=no">
+    <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+    <title>自定义导航栏</title>
+    <link href=../css/module.css rel=stylesheet>
+    <script src="../js/PASC.app.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function appNewWebView(urlString) {
+            var options = {
+                url: urlString
+            }
+            if(PASC.app.openNewWebView) {
+                PASC.app.openNewWebView(options, function(res) {
+                    console.log(JSON.stringify(res))
+                }, function(err) {
+                    alert("callback error="+JSON.stringify(err));
+                })
+            }
+        }
+
+        function toolBar (options) {
+            if (PASC.app.setToolBar) {
+                PASC.app.setToolBar(options, function (res) {
+
+                }, function (err) {
+                    alert("callback error=" + JSON.stringify(err));
+                })
+            }
+        }
+
+        function callbackAction() {
+            alert('客户端点击按钮');
+        }
+
+    </script>
+</head>
+<body>
+<div class="cell" onclick="appNewWebView(window.location.href)">新的界面打开当前网页</div>
+<div class="cell" onclick="toolBar({isHide: true})">隐藏导航栏</div>
+<div class="cell" onclick="toolBar({isHide: false})">显示导航栏</div>
+<div class="cell" onclick="toolBar({backgroundColor: '#FF0000'})">红色导航栏</div>
+<div class="cell" onclick="toolBar({tintColor: '#00FF00'})">绿色控件颜色</div>
+<div class="cell" onclick="toolBar({title: '自定义标题'})">设置标题：自定义标题</div>
+<div class="cell" onclick="toolBar({titleTextColor: '#0000FF'})">蓝色标题</div>
+<div class="cell" onclick="toolBar({titleTextSize: 24})">改变标题大小</div>
+<div class="cell" onclick="toolBar({statusBarBackgroundColor: '#ff9304'})">橙色背景状态栏</div>
+
+<div class="section">-----子标题-----</div>
+<div class="cell" onclick="toolBar({subtitle: '自定义子标题'})">设置子标题：自定义子标题</div>
+<div class="cell" onclick="toolBar({subtitle: '自定义子标题', subtitleTextColor: '#0000FF'})">蓝色子标题</div>
+<div class="cell" onclick="toolBar({subtitle: '自定义子标题', subtitleTextColor: '#0000FF', subtitleTextSize: 14})">改变子标题大小</div>
+
+<div class="section">-----左边按钮-----</div>
+<div class="cell" onclick="toolBar({leftBtns: [{ iconUrl : 'https://png.icons8.com/metro/1600/search.png', action: 'leftBtnAction', callback: callbackAction}]})">左边网络图标按钮</div>
+<div class="cell" onclick="toolBar({leftBtns: [{ iconType : 1, action: 'leftBtnAction', callback: callbackAction }]})">左边图标按钮</div>
+<div class="cell" onclick="toolBar({leftBtns: [{ title : '关闭', action: 'leftBtnAction', callback: callbackAction }]})">左边文字按钮</div>
+<div class="cell" onclick="toolBar({leftBtns: [{ iconType : 0, color: '#FF0000', action: 'leftBtnAction', callback: callbackAction }]})">左边红色按钮</div>
+<div class="cell" onclick="toolBar({leftBtns: [{ iconUrl : 'https://png.icons8.com/metro/1600/search.png', action: 'leftBtnAction', callback: callbackAction }, { iconUrl : 'https://png.icons8.com/metro/1600/search.png', action: 'leftBtnAction', callback: callbackAction }]})">左边两个网络图标按钮</div>
+<div class="cell" onclick="toolBar({leftBtns: [{ iconType : 0, action: 'leftBtnAction', callback: callbackAction }, { iconType : 1, action: 'leftBtnAction', callback: callbackAction }]})">左边两个图标按钮</div>
+<div class="cell" onclick="toolBar({leftBtns: [{ title : '关闭', action: 'leftBtnAction', callback: callbackAction }, { title : '关闭', action: 'leftBtnAction', callback: callbackAction }]})">左边两个文字按钮</div>
+<div class="cell" onclick="toolBar({leftBtns: [{ iconType : 0 }, { title : '关闭', action: 'leftBtnAction', callback: callbackAction }]})">左边两个混合按钮</div>
+
+<div class="section">-----右边按钮-----</div>
+<div class="cell" onclick="toolBar({rightBtns: [{ iconUrl : 'https://png.icons8.com/metro/1600/search.png', action: 'rightBtnAction', callback: callbackAction }]})">右边单个网络图标按钮</div>
+<div class="cell" onclick="toolBar({rightBtns: [{ iconType : 0, action: 'rightBtnAction', callback: callbackAction }]})">右边单个图标按钮</div>
+<div class="cell" onclick="toolBar({rightBtns: [{ title : '查询', action: 'rightBtnAction', callback: callbackAction }]})">右边单个文字按钮</div>
+<div class="cell" onclick="toolBar({rightBtns: [{ iconType : 0, color: '#FF0000', action: 'rightBtnAction', callback: callbackAction }]})">右边红色按钮</div>
+<div class="cell" onclick="toolBar({rightBtns: [{ iconUrl : 'https://png.icons8.com/metro/1600/search.png', action: 'rightBtnAction', callback: callbackAction }, { iconUrl : 'https://png.icons8.com/metro/1600/search.png', action: 'rightBtnAction', callback: callbackAction }]})">右边两个网络图标按钮</div>
+<div class="cell" onclick="toolBar({rightBtns: [{ iconType : 0, action: 'rightBtnAction', callback: callbackAction }, { iconType : 1, action: 'rightBtnAction', callback: callbackAction }]})">右边两个图标按钮</div>
+<div class="cell" onclick="toolBar({rightBtns: [{ title : '查询', action: 'rightBtnAction', callback: callbackAction }, { title : '分享', action: 'rightBtnAction', callback: callbackAction }]})">右边两个文字按钮</div>
+<div class="cell" onclick="toolBar({rightBtns: [{ iconType : 0, action: 'rightBtnAction', callback: callbackAction }, { title : '查询', action: 'rightBtnAction', callback: callbackAction }]})">右边两个混合按钮</div>
+
+
+<div class="cell" onclick="toolBar({rightBtns: [
+                    {
+                        iconType: 0,
+                        title: '分享',
+                        action: 'rightBtnAction',
+                        callback: callbackAction
+                    },
+                    {
+                        iconType: 1,
+                        title: '搜索',
+                        action: 'rightBtnAction',
+                        callback: callbackAction
+                    },
+                    {
+                        iconType: 2,
+                        title: '收藏已收藏',
+                        action: 'rightBtnAction',
+                        callback: callbackAction
+                    },
+                    {
+                        iconType: 3,
+                        title: '已收藏',
+                        action: 'rightBtnAction',
+                        callback: callbackAction
+                    }
+                ]})">右侧下拉菜单</div>
+</body>
+</html>
+

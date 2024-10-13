@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:gravity="end"
+    android:orientation="vertical">
+
+    <com.pasc.lib.widget.roundview.RoundTextView
+        android:id="@+id/tv_first"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        app:rv_backgroundColor="#ffffff"
+        android:gravity="center"
+        android:text="拍摄"
+        android:textColor="#2e332f"
+        android:textSize="@dimen/text_size_18" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#f4f4f4" />
+
+    <com.pasc.lib.widget.roundview.RoundTextView
+        android:id="@+id/tv_second"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        app:rv_backgroundColor="#ffffff"
+        android:gravity="center"
+        android:text="从手机相册选择"
+        android:textColor="#2e332f"
+        android:textSize="@dimen/text_size_18" />
+    <View
+        android:layout_width="match_parent"
+        android:background="#f4f4f4"
+        android:layout_height="6dp"/>
+
+    <com.pasc.lib.widget.roundview.RoundTextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        app:rv_backgroundColor="#ffffff"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="#2e332f"
+        android:textSize="@dimen/text_size_18"
+        />
+
+</LinearLayout>

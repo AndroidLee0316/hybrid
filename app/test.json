@@ -1,0 +1,629 @@
+{
+  "sections": [
+    {
+      "layout": 12,
+      "showNews": false,
+      "type": "NORMAL_SERVICE",
+      "items": [
+        {
+          "eventId": "个人版首页-常用服务-社保",
+          "identifier": "e993bce72ab54a48b0692e7403a8ea28",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190418/shebao.png",
+          "canShow": true,
+          "title": "社保"
+        },
+        {
+          "eventId": "个人版首页-常用服务-公积金",
+          "identifier": "c9a12126d9399802747422bdcd4bb07e",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190418/gongjijing.png",
+          "canShow": true,
+          "title": "公积金"
+        },
+        {
+          "eventId": "个人版首页-常用服务-摇号/竞价",
+          "identifier": "f4858336077bd401eb944c799cf7ba05",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190418/yaohaojingjia.png",
+          "canShow": true,
+          "title": "摇号/竞价"
+        },
+        {
+          "eventId": "个人版首页-常用服务-乘车码",
+          "identifier": "53cd3a8d49ab4fb64f3f3b4b3eefb466",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190418/chengchema.png",
+          "canShow": true,
+          "iconSub": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190525/biaoqianyouhui.png",
+          "title": "乘车码"
+        },
+        {
+          "eventId": "个人版首页-常用服务-学习强安",
+          "identifier": "8301de90cd424e858fe9797f1c378711",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190726/CYxuexiqiangan.png",
+          "canShow": true,
+          "title": "学习强安"
+        },
+        {
+          "eventId": "个人版首页-常用服务-交通违法处理",
+          "identifier": "e940e4d629184ba6859fd46043fcf9ce",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190701/jiaotongchuxingweizhang.png",
+          "canShow": true,
+          "iconSub": "",
+          "title": "交通违法处理"
+        },
+        {
+          "eventId": "个人版首页-常用服务-实时公交",
+          "identifier": "f2c40021e4550228b690f231c17006f8",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190531/timeBus.png",
+          "canShow": true,
+          "title": "实时公交"
+        },
+        {
+          "eventId": "个人版首页-常用服务-全部",
+          "identifier": "88de0626bb124f808544281540c3eb1c",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190418/all.png",
+          "canShow": true,
+          "title": "更多"
+        }
+      ]
+    },
+    {
+      "layout": 20,
+      "header": {
+        "subTitle": "",
+        "more": false,
+        "title": "上新服务",
+        "type": 5
+      },
+      "type": "LASTESTSERVICE",
+      "items": [
+        {
+          "eventId": "个人版首页-上新服务-深圳人才引进",
+          "identifier": "6696531872a24d8a92f30c060382ad02",
+          "subTitle": "应届毕业生接收",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190711/rencaiyinjin1.png",
+          "canShow": true,
+          "title": "深圳人才引进"
+        },
+        {
+          "eventId": "个人版首页-上新服务-公安户政业务",
+          "identifier": "3367e6f67fb2f2b8c674580436304434",
+          "subTitle": "深圳户籍迁入",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/0620/graduate.png",
+          "canShow": true,
+          "title": "公安户政业务"
+        },
+        {
+          "eventId": "个人版首页-上新服务-预约通行",
+          "identifier": "494470d90754fa648a4a0194afbfd6c6",
+          "subTitle": "仙湖/大鹏等",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/0605/yuyuetongxing.png",
+          "canShow": true,
+          "title": "预约通行"
+        },
+        {
+          "eventId": "个人版首页-上新服务-公安最新服务",
+          "identifier": "ed6c747dd1c519675c5b676f163858f3",
+          "subTitle": "无犯罪记录证明",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/0605/wufanzui.png",
+          "canShow": true,
+          "title": "公安最新服务"
+        },
+        {
+          "eventId": "个人版首页-上新服务-定制预警铃",
+          "identifier": "36e19a6eb8e513ee61d777e62c50dec1",
+          "subTitle": "台风暴雨早知道",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190523/yujinglin.png",
+          "canShow": true,
+          "title": "定制预警铃"
+        },
+        {
+          "eventId": "个人版首页-上新服务-证照全新改版",
+          "identifier": "d953d167eb92ab99b4af421fdb497e39",
+          "subTitle": "我的证照我做主",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190523/zhengzhaoquanxingaiban.png",
+          "canShow": true,
+          "title": "证照全新改版"
+        },
+        {
+          "eventId": "个人版首页-上新服务-大梅沙预约",
+          "identifier": "a24091fabe981544251dd59cee771384",
+          "subTitle": "轻松扫码入园",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/0605/dameishayuyue.png",
+          "canShow": true,
+          "title": "大梅沙预约"
+        },
+        {
+          "eventId": "个人版首页-上新服务-不动产查询",
+          "identifier": "4310f979d193a7f7fcf6196827f8004b",
+          "subTitle": "房产信息查询",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190429/budongchandengji.png",
+          "canShow": true,
+          "title": "不动产查询"
+        },
+        {
+          "eventId": "个人版首页-上新服务-地铁路线图",
+          "identifier": "483154fb4a6fd321e30190d9c2c29253",
+          "subTitle": "地铁路线规划",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190426/ditiehuancheng.png",
+          "canShow": true,
+          "title": "地铁路线图"
+        }
+      ]
+    },
+    {
+      "layout": 15,
+      "identifier": "a65651a6814d46259b7ae3658d6f5116",
+      "eventId": "个人版首页-网上办事",
+      "header": {
+        "subTitle": "深圳政务服务手机办",
+        "more": true,
+        "iconSub": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190418/list-miaopi.png",
+        "title": "网上办事",
+        "type": 3
+      },
+      "type": "GOVERN"
+    },
+    {
+      "layout": 26,
+      "type": "height:6"
+    },
+    {
+      "layout": 27,
+      "items": [
+        {
+          "eventId": "个人版首页-热门服务",
+          "title": "热门服务",
+          "sections": [
+            {
+              "layout": 23,
+              "identifier": "03f255bd3c504232adfe8a8effbd75ac",
+              "eventId": "个人版首页-交通出行-更多服务",
+              "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/0620/rm_jiaotengchuxing.png",
+              "header": {
+                "subTitle": "",
+                "more": true,
+                "icon": "http://iobs.pingan.com.cn/download/szsc-smt-app-dmz-prd/3e2e665c-22e4-4203-b289-14ad47853602_1541054792219",
+                "lineColor": "#30C1A4",
+                "title": "交通出行",
+                "type": 2
+              },
+              "type": "SMART_TRANSPORTATION",
+              "items": [
+                {
+                  "eventId": "个人版首页-交通出行-外地车申请通行证",
+                  "identifier": "c2d078d592d20a92aff838ff404f410f",
+                  "canShow": true,
+                  "title": "外地车申请通行证"
+                },
+                {
+                  "eventId": "个人版首页-交通出行-电子驾驶/行驶证",
+                  "identifier": "3f96d2aed2eb4771929f83a2a8931549",
+                  "canShow": true,
+                  "title": "电子驾驶/行驶证"
+                },
+                {
+                  "eventId": "个人版首页-交通出行-深圳摇号竞价攻略",
+                  "identifier": "3a31d65b85b5e82eccee9c1714020adc",
+                  "canShow": true,
+                  "title": "深圳摇号竞价攻略"
+                },
+                {
+                  "eventId": "个人版首页-交通出行-轻微事故处理",
+                  "identifier": "4d0de7e5f4e97be36eddb2edb7ffb34e",
+                  "canShow": true,
+                  "title": "轻微事故处理"
+                }
+              ]
+            },
+            {
+              "layout": 26,
+              "type": "marginLeft:51"
+            },
+            {
+              "layout": 23,
+              "identifier": "ca062553451e447ea2194fcb794374fa",
+              "eventId": "个人版首页-社会保障-更多服务",
+              "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/0620/rm_shehuibaozhang.png",
+              "header": {
+                "subTitle": "",
+                "more": true,
+                "icon": "http://iobs.pingan.com.cn/download/szsc-smt-app-dmz-prd/4c85099b-0cdd-4ca6-bb55-36ac3b7c7ec1_1541054792528",
+                "lineColor": "#1483EE",
+                "title": "社会保障",
+                "type": 2
+              },
+              "type": "SOCIAL",
+              "items": [
+                {
+                  "eventId": "个人版首页-社会保障-社保查询",
+                  "identifier": "78313afe70f7d4c35b184eac9903eb35",
+                  "canShow": true,
+                  "title": "社保查询"
+                },
+                {
+                  "eventId": "个人版首页-社会保障-社保测算",
+                  "identifier": "433be79317c8c9b3e5833652670ccc3b",
+                  "canShow": true,
+                  "title": "社保测算"
+                },
+                {
+                  "eventId": "个人版首页-社会保障-技术资格查询",
+                  "identifier": "cd5ee906bacb4ed28c6b67ec02da79f7",
+                  "canShow": true,
+                  "title": "技术资格查询"
+                },
+                {
+                  "eventId": "个人版首页-社会保障-社保网点",
+                  "identifier": "d3b92ab732ba1a8011f864c6b11d8d55",
+                  "canShow": true,
+                  "title": "社保网点"
+                }
+              ]
+            },
+            {
+              "layout": 26,
+              "type": "marginLeft:51"
+            },
+            {
+              "layout": 23,
+              "eventId": "个人版首页-医疗健康-更多服务",
+              "identifier": "d85cd18fd1ed4e58b01d30be426b0593",
+              "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/0620/rm_yiliao.png",
+              "header": {
+                "subTitle": "",
+                "more": true,
+                "icon": "http://iobs.pingan.com.cn/download/szsc-smt-app-dmz-prd/27852bbd-75ca-4b21-9b41-a65fc8ec09e5_1545355716014",
+                "title": "医疗健康",
+                "type": 2
+              },
+              "type": "MEDICAL",
+              "items": [
+                {
+                  "eventId": "个人版首页-医疗健康-预约挂号",
+                  "identifier": "8f6c51f37198a4f02e428f14228193b1",
+                  "icon": "http://iobs.pingan.com.cn/download/szsc-smt-app-dmz-prd/3b8b7efc-01b4-4206-be4a-3cc21878625c_1545377034537",
+                  "canShow": true,
+                  "title": "预约挂号"
+                },
+                {
+                  "eventId": "个人版首页-医疗健康-社康中心",
+                  "identifier": "4aecd2deefe26d29bf426f366864c56c",
+                  "icon": "http://iobs.pingan.com.cn/download/szsc-smt-app-dmz-prd/8f57b405-43e2-4057-94eb-d250d28b30ae_1545377036881",
+                  "canShow": true,
+                  "title": "社康中心"
+                },
+                {
+                  "eventId": "个人版首页-医疗健康-新婴疾病筛查",
+                  "identifier": "73c1a1d342a1820c0110dbd9f375ac83",
+                  "subTitle": "",
+                  "icon": "http://iobs.pingan.com.cn/download/szsc-smt-app-dmz-prd/871d84a3-da99-4224-b789-30ffee19faf5_1545377036367",
+                  "canShow": true,
+                  "title": "新婴疾病筛查"
+                },
+                {
+                  "eventId": "个人版首页-医疗健康-药品报销查询",
+                  "identifier": "6fae423e1791c683158daca84ff726c6",
+                  "canShow": true,
+                  "title": "药品报销查询"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventId": "个人版首页-专区服务",
+          "title": "专区服务",
+          "sections": [
+            {
+              "layout": 28,
+              "items": [
+                {
+                  "identifier": "818fd33bba4c404f9f6676973ac8bfe0",
+                  "eventId": "个人版首页-专区服务-人才服务专区",
+                  "subTitle": "引进落户、资格认定、培养补贴一站式",
+                  "iconMark": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/enterprise/20190614/newRedPoint.png",
+                  "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190910/rencaizhuanqu.png",
+                  "title": "人才服务专区"
+                },
+                {
+                  "identifier": "d53a1a0cbda3443086f172a89e5545f6",
+                  "eventId": "个人版首页-专区服务-“谈天说地”话天气",
+                  "subTitle": "气象科普视频、气象预警铃、台风实况等",
+                  "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190905/shuotianqi.png",
+                  "title": "“谈天说地”话天气"
+                },
+                {
+                  "identifier": "3a31d65b85b5e82eccee9c1714020adc",
+                  "eventId": "个人版首页-专区服务-深圳摇号竞价全攻略",
+                  "subTitle": "摇号竞价全攻略，查询、申请、延期等服务",
+                  "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/0620/zq_yaohaojingjia.png",
+                  "title": "深圳摇号竞价全攻略"
+                },
+                {
+                  "identifier": "e940e4d629184ba6859fd46043fcf9ce",
+                  "eventId": "个人版首页-专区服务-交通违法处理专区",
+                  "subTitle": "交通违法查询、缴费、申诉等",
+                  "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190726/ZQjiaotongweifa.png",
+                  "title": "交通违法处理专区"
+                },
+                {
+                  "identifier": "1eb36f375ddb42b89b3dadadac119fd0",
+                  "eventId": "个人版首页-专区服务-毕业生入户专区",
+                  "subTitle": "毕业来深不为难，秒批入户掌上办",
+                  "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190711/biyesheng.png",
+                  "title": "毕业生入户专区"
+                },
+                {
+                  "identifier": "03f255bd3c504232adfe8a8effbd75ac",
+                  "eventId": "个人版首页-专区服务-交通出行专区",
+                  "subTitle": "实时公交查询、电子证照、车主服务等",
+                  "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/0620/zq_jiaotengchuxing.png",
+                  "title": "交通出行专区"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": 26,
+      "type": "height:6"
+    },
+    {
+      "layout": 21,
+      "identifier": "c589cd34427f4efe91192e811fe0ed98",
+      "eventId": "个人版首页-部门服务",
+      "header": {
+        "subTitle": "已入驻17家部门单位",
+        "more": true,
+        "title": "部门服务",
+        "type": 4
+      },
+      "type": "MunicipalUnit",
+      "items": [
+        {
+          "eventId": "个人版首页-部门服务-市公安局",
+          "identifier": "3367e6f67fb2f2b8c674580436304434",
+          "subTitle": "户政业务、交管业务、出入境业务等189项服务",
+          "iconMark": "",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190523/shigonganju.png",
+          "canShow": true,
+          "title": "市公安局"
+        },
+        {
+          "eventId": "个人版首页-部门服务-市人力资源保障局",
+          "identifier": "e993bce72ab54a48b0692e7403a8ea28",
+          "subTitle": "电子社保卡、社保查询、人才引进等77项服务",
+          "iconMark": "",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190418/renliziyuanshebaoju.png",
+          "canShow": true,
+          "title": "市人力资源保障局"
+        },
+        {
+          "eventId": "个人版首页-部门服务-市市场监督管理局",
+          "identifier": "45072e28db3046e9934b94c2a406f975",
+          "subTitle": "企业登记档案查询、商事登记等72项服务",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190418/shichangjianduguanliju.png",
+          "canShow": true,
+          "title": "市市场监督管理局"
+        },
+        {
+          "eventId": "个人版首页-部门服务-市交通运输局",
+          "identifier": "f4858336077bd401eb944c799cf7ba05",
+          "subTitle": "摇号/竞价、实时公交、宜停车等64项服务",
+          "iconMark": "",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190418/shijiaotongyunshuju.png",
+          "canShow": true,
+          "title": "市交通运输局"
+        },
+        {
+          "eventId": "个人版首页-部门服务-市住房和建设局",
+          "identifier": "9dba8c89ab4e45318fadd5b8c48b738c",
+          "subTitle": "公积金提取、公租房轮候查询等56项服务",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/zhujianju.png",
+          "canShow": true,
+          "iconSub": "",
+          "title": "市住房和建设局"
+        },
+        {
+          "eventId": "个人版首页-部门服务-市民政局",
+          "identifier": "7f4625697f5c42c5827140c0c995e355",
+          "subTitle": "婚姻登记、基金会成立登记等40项服务",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190627/mingzhengju.png",
+          "canShow": true,
+          "iconSub": "",
+          "title": "市民政局"
+        }
+      ]
+    },
+    {
+      "layout": 17,
+      "identifier": "b4a2c416b9814d07a82d5b2ed588e849",
+      "eventId": "个人版首页-区级服务",
+      "header": {
+        "subTitle": "已入驻10家区级单位",
+        "more": true,
+        "title": "区级服务",
+        "type": 4
+      },
+      "type": "GovDepartment",
+      "items": [
+        {
+          "eventId": "个人版首页-区级服务-福田区",
+          "identifier": "176e93ea69894fb98ff22a92ad0a6ee3",
+          "iconMark": "",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190418/futianqu.png",
+          "canShow": true,
+          "title": "福田区"
+        },
+        {
+          "eventId": "个人版首页-区级服务-罗湖区",
+          "identifier": "4beb673f5bb344ddaefcd251f09f7f68",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190418/luohuqu.png",
+          "canShow": true,
+          "title": "罗湖区"
+        },
+        {
+          "eventId": "个人版首页-区级服务-盐田区",
+          "identifier": "5fdd00ec527d4b88994a7e3dad6e4dc9",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190418/yantianqu.png",
+          "canShow": true,
+          "title": "盐田区"
+        },
+        {
+          "eventId": "个人版首页-区级服务-南山区",
+          "identifier": "c5738686cbc446beb80166a25a016dfe",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190418/nanshanqu.png",
+          "canShow": true,
+          "title": "南山区"
+        },
+        {
+          "eventId": "个人版首页-区级服务-宝安区",
+          "identifier": "572c7c11787545f2a6cad2e98073eae3",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190418/baoanqu.png",
+          "canShow": true,
+          "title": "宝安区"
+        },
+        {
+          "eventId": "个人版首页-区级服务-龙岗区",
+          "identifier": "29e141c759464fc491d7040e23e044a4",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190418/longganqu.png",
+          "canShow": true,
+          "title": "龙岗区"
+        },
+        {
+          "eventId": "个人版首页-区级服务-光明区",
+          "identifier": "86f5b178efa24073aa12cfae75e1ef72",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190418/guangmingqu.png",
+          "canShow": true,
+          "iconSub": "",
+          "title": "光明区"
+        },
+        {
+          "eventId": "个人版首页-区级服务-坪山区",
+          "identifier": "4a9a3ccd3d5e4e2db5fef33f98a277dc",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190418/pingshanqu.png",
+          "canShow": true,
+          "iconSub": "",
+          "title": "坪山区"
+        },
+        {
+          "eventId": "个人版首页-区级服务-龙华区",
+          "identifier": "879203e8fcec4684b43a35ec3fc6c821",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190426/longhuaqu.png",
+          "canShow": true,
+          "iconSub": "",
+          "title": "龙华区"
+        },
+        {
+          "eventId": "个人版首页-区级服务-大鹏新区",
+          "identifier": "82ba42cffac249a2bf4178dc4319243e",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190523/dapengxinqu.png",
+          "canShow": true,
+          "title": "大鹏新区"
+        }
+      ]
+    },
+    {
+      "layout": 17,
+      "identifier": "30c1cb36884640a3b41fbc6c58e38043",
+      "eventId": "个人版首页-国企服务",
+      "header": {
+        "subTitle": "已入驻18家国企单位",
+        "more": true,
+        "title": "国企服务",
+        "type": 4
+      },
+      "type": "GovDepartment",
+      "items": [
+        {
+          "eventId": "个人版首页-国企服务-水务集团",
+          "identifier": "0b09a37642524b2d995d03ca73bc0b14",
+          "iconMark": "",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190418/shuiwujituan.png",
+          "canShow": true,
+          "title": "水务集团"
+        },
+        {
+          "eventId": "个人版首页-国企服务-机场集团",
+          "identifier": "92bd61b4c91447fc9732751c53ed74bc",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190418/jichangjituan.png",
+          "canShow": true,
+          "iconSub": "",
+          "title": "机场集团"
+        },
+        {
+          "eventId": "个人版首页-国企服务-燃气集团",
+          "identifier": "43d7ed8bd30c46829685815a46b12fe1",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190418/ranqijituan.png",
+          "canShow": true,
+          "title": "燃气集团"
+        },
+        {
+          "eventId": "个人版首页-国企服务-巴士集团",
+          "identifier": "edcfdd9bb304448d8b2ed5cc676bd3bd",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190418/bashijituan.png",
+          "canShow": true,
+          "title": "巴士集团"
+        },
+        {
+          "eventId": "个人版首页-国企服务-东部公交",
+          "identifier": "6a98e2a6dbf147a3813473c2263eeed4",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190523/dongbugongjiao.png",
+          "canShow": true,
+          "title": "东部公交"
+        }
+      ]
+    },
+    {
+      "layout": 22,
+      "identifier": "815dfe69352e4608bc80dbb37cec4b43",
+      "eventId": "个人版首页-鹏城风采",
+      "header": {
+        "subTitle": "",
+        "more": true,
+        "title": "鹏城风采",
+        "type": 4
+      },
+      "type": "SZ_IMPRESSION",
+      "banners": [
+        {
+          "title": "请拉取运营系统数据"
+        }
+      ],
+      "items": [
+        {
+          "eventId": "个人版首页-鹏城风采-活动",
+          "identifier": "7357584dd110f8a7a32f587915cbfa4d",
+          "subTitle": "亲子活动精彩纷呈",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190318/huodong.png",
+          "canShow": true,
+          "title": "活动"
+        },
+        {
+          "eventId": "个人版首页-鹏城风采-演出",
+          "identifier": "0a0e91051399adac2ba245c9ea647039",
+          "subTitle": "世界风情荟萃演出",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190318/yanchu.png",
+          "canShow": true,
+          "title": "演出"
+        },
+        {
+          "eventId": "个人版首页-鹏城风采-展览",
+          "identifier": "70d5d2ca07c6ceafc1940421b09ff49f",
+          "subTitle": "艺术展览滋养心灵",
+          "icon": "http://smt-cdn.yun.city.pingan.com/isz/app/icon/homepage/20190318/zhanlan.png",
+          "canShow": true,
+          "title": "展览"
+        }
+      ]
+    }
+  ],
+  "setting": {
+    "contractor": "平安科技承建",
+    "hasMessageIcon": true,
+    "sponsor": "深圳市政务服务数据管理局主办",
+    "hasWeatherIcon": true,
+    "bannerClipImage": "http://iobs.pingan.com.cn/download/szsc-smt-app-dmz-prd/344e4cff-0085-4131-a7b5-c7d56b436e48_1540974518803"
+  }
+}

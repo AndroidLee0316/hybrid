@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.chenkun305.libbrowser">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_GPS"/>
+    <uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS"/>
+    <!-- 高德地图权限 -->
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:name="com.pasc.libbrowser.App"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true">
+
+        <meta-data android:name="android.notch_support" android:value="true"/>
+        <activity android:name="com.pasc.libbrowser.MainActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.pasc.libbrowser.LoginActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.pasc.libbrowser.WebQRCapturesActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.pasc.lib.hybrid.eh.activity.FileBrowseActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.pasc.libbrowser.BigPhotoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.pasc.libbrowser.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Fullscreen.Translucent">
+        </activity>
+
+        <!-- ****************qq三方登录begin****************** -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="tencent1106846108"/> <!-- 开放平台获取的APPID -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:replace="android:screenOrientation"/>
+
+
+        <!-- ****************qq三方登录end********************* -->
+
+        <!-- 高德 key d3f8637a09730bdd57e5784718eb5642 com.pasc.libbrowser：4156dd01725ccd6cb05c974ccf8cf1db-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="d3f8637a09730bdd57e5784718eb5642"/>
+
+        <!-- 高德定位服务 -->
+        <service android:name="com.amap.api.location.APSService"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.pingan.smt.test1.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/demo_file_paths"
+                tools:replace="android:resource"/>
+        </provider>
+
+        <!--<provider-->
+            <!--android:name="com.luck.video.lib.PictureFileProvider"-->
+            <!--android:authorities="${applicationId}.provider"-->
+            <!--android:exported="false"-->
+            <!--android:grantUriPermissions="true">-->
+            <!--<meta-data-->
+                <!--android:name="android.support.FILE_PROVIDER_PATHS"-->
+                <!--android:resource="@xml/file_paths" />-->
+        <!--</provider>-->
+        <!--<provider-->
+            <!--android:name="com.iceteck.silicompressorr.provider.GenericFileProvider"-->
+            <!--android:authorities="${applicationId}.provider"-->
+            <!--android:exported="false"-->
+            <!--android:grantUriPermissions="true">-->
+            <!--<meta-data-->
+                <!--android:name="android.support.FILE_PROVIDER_PATHS"-->
+                <!--android:resource="@xml/provider_paths" />-->
+        <!--</provider>-->
+        <!--<provider-->
+            <!--android:name="android.support.v4.content.FileProvider"-->
+            <!--android:authorities="${applicationId}.fileprovider"-->
+            <!--android:exported="false"-->
+            <!--android:grantUriPermissions="true"-->
+            <!--tools:replace="android:authorities">-->
+            <!--<meta-data-->
+                <!--android:name="android.support.FILE_PROVIDER_PATHS"-->
+                <!--android:resource="@xml/app_provider_paths"-->
+                <!--tools:replace="android:resource" />-->
+        <!--</provider>-->
+        <!---->
+    </application>
+
+</manifest>

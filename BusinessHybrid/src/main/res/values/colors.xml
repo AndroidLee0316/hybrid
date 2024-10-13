@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="hybrideh_gray_666666">#666666</color>
+    <color name="hybrideh_gray_dddddd">#dddddd</color>
+    <color name="hybrideh_black_333333">#333333</color>
+    <color name="hybrideh_blue_469cf1">#469cf1</color>
+
+    <!--透明-->
+    <color name="hybrideh_transparent_00">#00000000</color>
+    <color name="hybrideh_transparent_ff">#00ffffff</color>
+    <color name="hybrideh_transparent_half">#30000000</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!-- QRCode scanner color begin -->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#B0000000</color>
+    <color name="viewfinder_frame">#90FFFFFF</color>
+    <color name="result_point_color">#C0FFFF00</color>
+    <color name="laser_color">#0F0</color>
+    <color name="corner_color">#00FF00</color>
+
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loopin_popup_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/paschybrid_bg_web_popup">
+
+    <ListView
+        android:id="@+id/lv_web_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:divider="@color/gray_e8e8e8"
+        android:dividerHeight="0.5dp"
+        android:scrollbars="none"/>
+
+</RelativeLayout>

@@ -1,0 +1,167 @@
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>
+        js调用java
+    </title>
+</head>
+
+<body>
+<p>
+    <xmp id="show">
+    </xmp>
+</p>
+<p>
+    <xmp id="init">
+    </xmp>
+</p>
+<p>
+    <input type="text" id="ursername" value="用户名(username)"/>
+</p>
+<p>
+    <input type="text" id="password" value="password"/>
+</p>
+<p>
+    <input type="button" id="sendMessger" value="发消息给Native" onclick="sendMessgerToNative();"
+    />
+</p>
+<p>
+    <input type="button" id="callNative" value="调用Native方法" onclick="callNativeFunc();"
+    />
+</p>
+<p>
+    <input type="button" id="webControlBackItem" value="调用Native方法_webControlBackItem"
+           onclick="webControlBackItem();"
+    />
+</p>
+<p>
+    <input type="button" id="webForTestError" value="webForTestError" onclick="webForTestError();"
+    />
+</p>
+<p>
+    <input type="button" id="showhtml" value="显示html" onclick="showhtml();"/>
+</p>
+<p>
+    <input type="file" value="打开文件"/>
+</p>
+<a href="https://www.baidu.com/">百度一下</a>
+</body>
+<!--<script>-->
+<!--        function showhtml() {-->
+<!--            console.log('rick_Print:[H5]showhtml');-->
+<!--            document.getElementById("show").innerHTML = document.getElementsByTagName("html")[0].innerHTML;-->
+<!--        }-->
+
+<!--        function sendMessgerToNative() {-->
+<!--            var str1 = document.getElementById("ursername").value;-->
+<!--            var str2 = document.getElementById("password").value;-->
+
+<!--            //send message to native-->
+<!--            var data = {id: 1, content: "ursername="+str1+" password="+str2};-->
+<!--            console.log('rick_Print:[H5]sendMessgerToNative data='+data);-->
+<!--            window.WebViewJavascriptBridge.send(-->
+<!--                data-->
+<!--                , function(responseData) {-->
+<!--                    document.getElementById("show").innerHTML = "repsonseData from java, data = " + responseData-->
+<!--                }-->
+<!--            );-->
+
+<!--        }-->
+
+<!--        function callNativeFunc() {-->
+<!--            var str1 = document.getElementById("ursername").value;-->
+<!--            var str2 = document.getElementById("password").value;-->
+
+<!--            console.log('rick_Print:[H5]callNativeFunc submitFromWeb');-->
+<!--            //call native method-->
+<!--            window.WebViewJavascriptBridge.callHandler(-->
+<!--                'submitFromWeb'-->
+<!--                , {'param': '中文测试'}-->
+<!--                , function(responseData) {-->
+<!--                    document.getElementById("show").innerHTML = "send get responseData from java, data = " + responseData-->
+<!--                }-->
+<!--            );-->
+<!--        }-->
+
+<!--        function webControlBackItem() {-->
+<!--            var options = {-->
+<!--                isWebControlBackItem:true,-->
+<!--                parm:'需要传递的参数'-->
+<!--            }-->
+
+<!--            window.WebViewJavascriptBridge.callHandler(-->
+<!--                'PASC.app.webControlBackItem'-->
+<!--                , options-->
+<!--                ,function(responseData) {-->
+<!--                    document.getElementById("show").innerHTML = "send get responseData from java, data = " + responseData-->
+<!--                }-->
+<!--            );-->
+<!--        }-->
+
+
+<!--        function webForTestError() {-->
+<!--            var options = {-->
+<!--                isWebControlBackItem:true,-->
+<!--                parm:'需要传递的参数'-->
+<!--            }-->
+
+<!--            window.WebViewJavascriptBridge.callHandler(-->
+<!--                'PASC.app.webForTestError'-->
+<!--                , options-->
+<!--                , function(res) {-->
+<!--                        alert("callback succ="+JSON.stringify(res));-->
+<!--                    }, function(err) {-->
+<!--                        alert("callback error="+JSON.stringify(err));-->
+<!--                    }-->
+<!--            );-->
+<!--        }-->
+
+<!--        function bridgeLog(logContent) {-->
+<!--            console.log('rick_Print:[H5]bridgeLog logContent:'+logContent);-->
+<!--            document.getElementById("show").innerHTML = logContent;-->
+<!--        }-->
+
+<!--        function connectWebViewJavascriptBridge(callback) {-->
+<!--            console.log('rick_Print:[H5]connectWebViewJavascriptBridge JS got a message:'+message +' callback='+callback);-->
+<!--            if (window.WebViewJavascriptBridge) {-->
+<!--                callback(WebViewJavascriptBridge)-->
+<!--            } else {-->
+<!--                document.addEventListener(-->
+<!--                    'WebViewJavascriptBridgeReady'-->
+<!--                    , function() {-->
+<!--                        callback(WebViewJavascriptBridge)-->
+<!--                    },-->
+<!--                    false-->
+<!--                );-->
+<!--            }-->
+<!--        }-->
+
+<!--        connectWebViewJavascriptBridge(function(bridge) {-->
+<!--            console.log('rick_Print:[H5]connectWebViewJavascriptBridge');-->
+<!--            bridge.init(function(message, responseCallback) {-->
+<!--                console.log('rick_Print:[H5]bridge.init JS got a message:'+message);-->
+<!--                var data = {-->
+<!--                    'Javascript Responds': '测试中文!'-->
+<!--                };-->
+
+<!--                if (responseCallback) {-->
+<!--                    console.log('JS responding with '+ data);-->
+<!--                    responseCallback(data);-->
+<!--                }-->
+<!--            });-->
+
+<!--            bridge.registerHandler("functionInJs", function(data, responseCallback) {-->
+<!--                console.log('rick_Print:[H5]registerHandler functionInJs');-->
+<!--                document.getElementById("show").innerHTML = ("data from Java: = " + data);-->
+<!--                if (responseCallback) {-->
+<!--                    var responseData = "Javascript Says Right back aka!";-->
+<!--                    responseCallback(responseData);-->
+<!--                }-->
+<!--            });-->
+<!--        })-->
+
+
+
+<!--</script>-->
+
+</html>

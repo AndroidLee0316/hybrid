@@ -1,0 +1,3 @@
+include ':app', ':LibHybrid', ':BusinessHybrid', ':LibOffline', ':Libopenplatform'
+
+//include ':LibHybrid'

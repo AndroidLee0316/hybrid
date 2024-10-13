@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">LibBrowser</string>
+
+    <string name="share_to">分享到</string>
+    <string name="sms">短信</string>
+    <string name="qq">QQ好友</string>
+    <string name="qq_zone">QQ空间</string>
+    <string name="weibo">微博</string>
+    <string name="copy_link">复制链接</string>
+    <string name="browser_open">浏览器打开</string>
+    <string name="copy_link_success">链接复制成功</string>
+    <string name="wechat_friend">微信好友</string>
+    <string name="friends">微信朋友圈</string>
+
+    <string name="paschybrid_config_auth_agreement_visibility">invisiable</string>
+
+</resources>

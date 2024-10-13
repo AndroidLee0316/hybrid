@@ -1,0 +1,63 @@
+apply plugin: 'com.android.library'
+apply from: 'uploadmaven.gradle'
+
+android {
+    compileSdkVersion rootProject.ext.compile_sdk_version
+    buildToolsVersion rootProject.ext.build_tool_version
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.min_sdk_version
+        targetSdkVersion rootProject.ext.target_sdk_version
+        versionCode 1
+        versionName '1.1.0'
+        // 在主工程设置
+        //ndk{abiFilters "armeabi"}
+    }
+
+    buildTypes {
+        def ifRelease = false
+        try {
+            ifRelease = isRelease == 'true'
+        } catch (Exception e) {
+
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs += 'src/main/res-theme'
+        }
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation "com.android.support:appcompat-v7:${support_lib_version}"
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.flyco.roundview:FlycoRoundView_Lib:1.1.4@aar'
+    implementation "io.reactivex.rxjava2:rxjava:${rootProject.ext.rxjava2Version}"
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.3@aar'
+
+    implementation LIB_NET
+//    compileOnly "com.tencent.smtt:smtt:4.3.0.0"
+    api 'com.tencent.tbs:tbssdk:44286'
+    implementation "com.github.bumptech.glide:glide:4.7.1"
+}
+
+task sourceJar (type:Jar) {
+    classifier = 'sources'
+    from 'src/main/java'
+}
+
+artifacts {
+    archives sourceJar
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="http://smt-web-stg.com.pingan.com.cn/lib/pasc/hybrid/1.0.0/sc-hybrid-async-loader.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            function getUserInfo() {
+                if (window.scHybridBridge.isInSmtApp()) {
+                  alert("1");
+                  window.scHybridBridge.getUserInfo(function (result) {
+                    alert("2");
+                    if (result.code === window.scHybridBridge.CODE.SUCCESS) {
+                      alert("登录用户信息：" + JSON.stringify(result));
+                    }
+                    // 未登录
+                    else if (result.code === -1) {
+                      // 拉起Native登录界面
+                      window.scHybridBridge.login(function (result) {
+                        if (result.code === window.scHybridBridge.CODE.SUCCESS) {
+                          alert("登录用户信息：" + JSON.stringify(result));
+                        }
+                      });
+                    }
+                    // 当前版本过低，不支持该Hybrid交互接口
+                    else if (result.code === window.scHybridBridge.CODE.NOT_SUPPORT) {
+                      alert(result.message);
+                    }
+                  });
+                } else {
+                  alert("TODO: 非App环境，不能获取用户信息，需要提示引导用户下载App");
+                }
+            }
+        </script>
+    </head>
+    <body style="position: fixed; left: 0; top: 0; bottom: 0; right: 0; display: flex; justify-content: center; align-items: center;">
+        <button onclick="javascript:getUserInfo();">Test</button>
+    </body>
+</html>

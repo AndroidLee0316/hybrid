@@ -1,0 +1,36 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pasc.libopenplatform">
+
+  <application>
+    <activity
+        android:name="com.pasc.lib.openplatform.OpenAuthorizationActivity"
+        android:configChanges="orientation|screenSize|keyboardHidden"
+        android:hardwareAccelerated="true"
+        android:screenOrientation="portrait"
+        android:launchMode="singleTask"/>
+      <activity
+          android:name="com.pasc.lib.openplatform.OpenCorporateAuthorizationActivity"
+          android:configChanges="orientation|screenSize|keyboardHidden"
+          android:hardwareAccelerated="true"
+          android:screenOrientation="portrait"
+          android:launchMode="singleTask"/>
+    <activity
+        android:name="com.pasc.lib.openplatform.DataSecretaryListActivity"
+        android:configChanges="orientation|screenSize|keyboardHidden"
+        android:hardwareAccelerated="true"
+        android:screenOrientation="portrait"
+        />
+    <activity
+        android:name="com.pasc.lib.openplatform.DataSecretaryDetailActivity"
+        android:configChanges="orientation|screenSize|keyboardHidden"
+        android:hardwareAccelerated="true"
+        android:screenOrientation="portrait"
+        />
+    <activity
+        android:name="com.pasc.lib.openplatform.OpenAuthSelectActivity"
+        android:configChanges="orientation|screenSize|keyboardHidden"
+        android:hardwareAccelerated="true"
+        android:screenOrientation="portrait"
+        android:launchMode="singleTask"/>
+  </application>
+</manifest>

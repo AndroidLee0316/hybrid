@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="openplatform_user_cancel">用户拒绝授权</string>
+  <string name="openplatform_user_address_select">选择授权地址</string>
+  <string name="openplatform_user_address_remark">地址基本信息（姓名，电话，详细地址）</string>
+  <string name="openplatform_user_un_init_jssdk">没有初始化JSSDK</string>
+</resources>

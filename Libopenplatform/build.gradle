@@ -1,0 +1,77 @@
+apply plugin: 'com.android.library'
+apply from: 'uploadmaven.gradle'
+
+android {
+    compileSdkVersion rootProject.ext.compile_sdk_version
+    buildToolsVersion rootProject.ext.build_tool_version
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.min_sdk_version
+        targetSdkVersion rootProject.ext.target_sdk_version
+        versionCode 1
+        versionName '1.1.0'
+        // 在主工程设置
+        //ndk{abiFilters "armeabi"}
+    }
+
+    buildTypes {
+        def ifRelease=false
+        try{
+            ifRelease=isRelease=='true'
+        }catch (Exception e){
+
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs += 'src/main/res-theme'
+        }
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation "com.android.support:appcompat-v7:${support_lib_version}"
+    implementation "com.android.support:design:${support_lib_version}"
+    api project(':BusinessHybrid')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation LIB_NET
+    implementation 'com.github.AndroidLee0316:base:support_1.0.0'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.37'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    api 'com.github.AndroidLee0316:base:support_1.0.0'
+    api 'com.tencent.tbs:tbssdk:44286'
+}
+
+
+task sourceJar (type:Jar) {
+    classifier = 'sources'
+    from 'src/main/java'
+}
+
+artifacts {
+    archives sourceJar
+}
+apply plugin: 'maven'
+uploadArchives{
+    repositories.mavenDeployer{
+        pom.groupId = "com.zxs.lib"// 唯一标识（通常为模块包名，也可以任意）
+        pom.artifactId = "openplatform" // 项目名称（通常为类库模块名称，也可以任意）
+        pom.version = "1.0.0" // 版本号
+        // 配置本地仓库路径，项目根目录下的repository目录中
+        repository(url: uri('E:/zxsCode/maven'))
+    }
+}

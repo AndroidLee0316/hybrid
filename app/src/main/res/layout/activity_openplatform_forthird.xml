@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="提示：开放平台需要token，如果未登陆请先登陆"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/bt_login"
+        android:text="登陆常熟帐号"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_50" />
+    <Button
+        android:id="@+id/bt_auth"
+        android:text="获取开放平台授权"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_50" />
+</LinearLayout>

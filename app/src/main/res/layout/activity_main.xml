@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.pasc.libbrowser.MainActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_tab_footer"
+        android:layout_gravity="center" >
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/ll_tab_footer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:id="@+id/tv_tab_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:text="主页1"
+            />
+
+        <TextView
+            android:id="@+id/tv_tab_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/black_333333"
+            android:gravity="center"
+            android:text="主页2"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_50"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="第三方服务信息"
+            android:textColor="@color/black_333333"/>
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="JSSDK初始化"
+            android:textColor="@color/black_333333"/>
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="获取openID"
+            android:textColor="@color/black_333333"/>
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="getRequestCode"
+            android:textColor="@color/black_333333"/>
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="授权状态"
+            android:textColor="@color/black_333333"/>
+    </LinearLayout>
+
+</RelativeLayout>

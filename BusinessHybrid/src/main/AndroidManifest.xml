@@ -1,0 +1,41 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pasc.lib.hybrid.eh">
+
+  <uses-permission android:name="android.permission.VIBRATE"/> <!-- 震动权限 -->
+  <uses-permission android:name="android.permission.CAMERA"/>
+  <uses-feature android:name="android.hardware.camera"/> <!-- 使用照相机权限 -->
+  <uses-feature android:name="android.hardware.camera.autofocus"/> <!-- 自动聚焦权限 -->
+
+  <application>
+
+    <activity
+        android:name=".activity.HybridFilePreviewActivity"
+        android:configChanges="orientation|screenSize|keyboardHidden"
+        />
+    <activity
+        android:name="com.pasc.lib.hybrid.eh.zxing.activity.CaptureActivity"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+    <activity
+        android:name=".activity.AddressNavigationActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:exported="false"
+        android:launchMode="singleTop"
+        android:screenOrientation="portrait"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+
+    <activity
+        android:name=".activity.DriveRouteActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:exported="false"
+        android:screenOrientation="portrait"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+    <activity android:name=".activity.FileBrowseActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:exported="false"
+        android:launchMode="singleTop"
+        android:screenOrientation="portrait"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+
+  </application>
+
+</manifest>

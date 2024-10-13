@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/common_webview_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/mprogressBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:max="100"
+        android:progressDrawable="@drawable/paschybrid_drawable_progress_bar"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/web_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <com.pasc.lib.hybrid.webview.PascWebView
+        android:id="@+id/pasc_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/web_empty_view"
+        android:layout_below="@id/mprogressBar"
+        android:layout_gravity="center" />
+
+    <FrameLayout
+        android:id="@+id/frame_web_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+</RelativeLayout>

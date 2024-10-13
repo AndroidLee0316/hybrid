@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white_ffffff">
+    <TextView
+        android:id="@+id/temp_map_app_select_title"
+        android:layout_width="match_parent"
+        style="@style/MapAppSelect_Behavior"
+        android:text="请选择地图下载"
+        android:background="@color/gray_dddddd"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/temp_select_gao_de"
+        android:layout_width="match_parent"
+        android:text="用高德地图导航"
+        style="@style/MapAppSelect_Behavior"/>
+    <View
+        android:id="@+id/temp_divider_gaode_baidu"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_dddddd"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"/>
+    <TextView
+        android:id="@+id/temp_select_bai_du"
+        android:layout_width="match_parent"
+        style="@style/MapAppSelect_Behavior"
+        android:text="用百度地图导航"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_10"
+        android:background="@color/gray_dddddd"/>
+    <TextView
+        android:id="@+id/temp_cancel"
+        android:layout_width="match_parent"
+        style="@style/MapAppSelect_Behavior"
+        android:text="取消"/>
+</LinearLayout>

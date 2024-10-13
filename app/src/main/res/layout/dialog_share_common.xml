@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    >
+
+
+  <com.flyco.roundview.RoundLinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:paddingBottom="15dp"
+      app:rv_backgroundColor="@color/white_ffffff"
+      >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/text_size_13"
+        android:textColor="@color/black_2e332f"
+        android:text="分享到"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+  </com.flyco.roundview.RoundLinearLayout>
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="1px"
+      android:background="@color/gray_dddddd"
+      />
+  <com.flyco.roundview.RoundTextView
+      android:id="@+id/rtv_cancle"
+      android:layout_width="match_parent"
+      android:layout_height="55dp"
+      android:gravity="center"
+      android:text="取消"
+      android:textColor="@color/black_2e332f"
+      android:textSize="@dimen/text_size_17"
+      app:rv_backgroundColor="@color/white_ffffff"
+      />
+
+
+</LinearLayout>
