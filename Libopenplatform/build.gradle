@@ -15,27 +15,18 @@ android {
     }
 
     buildTypes {
-        def ifRelease=false
-        try{
-            ifRelease=isRelease=='true'
-        }catch (Exception e){
-
-        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 
+    productFlavors {
+    }
     sourceSets {
         main {
             res.srcDirs += 'src/main/res-theme'
         }
-    }
-
-    compileOptions {
-        targetCompatibility 1.8
-        sourceCompatibility 1.8
     }
 }
 
@@ -44,14 +35,15 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.2'
     implementation "com.android.support:appcompat-v7:${support_lib_version}"
     implementation "com.android.support:design:${support_lib_version}"
-    api project(':BusinessHybrid')
+    implementation  "com.zxs.lib:behavior:1.0.0"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation LIB_NET
-    implementation 'com.github.AndroidLee0316:base:support_1.0.0'
+    api 'com.github.AndroidLee0316:zxs_net:support_2.0.0'
+    api 'com.github.AndroidLee0316:base:support_1.0.0'
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.37'
     implementation 'org.greenrobot:eventbus:3.1.1'
+    api  "com.zxs.lib:hybrid:1.0.0"
     api 'com.github.AndroidLee0316:base:support_1.0.0'
     api 'com.tencent.tbs:tbssdk:44286'
 }
